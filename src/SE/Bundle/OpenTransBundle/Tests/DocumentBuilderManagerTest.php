@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of the BMEcat php library
+ * This file is part of the OpenTrans php library
  *
  * (c) Sven Eisenschmidt <sven.eisenschmidt@gmail.com>
  *

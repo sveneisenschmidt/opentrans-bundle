@@ -13,7 +13,7 @@ use \Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  *
- * @package SE\Bundle\BmecatBundle\Tests
+ * @package SE\Bundle\OpenTransBundle\Tests
  * @author Sven Eisenschmidt <sven.eisenschmidt@gmail.com>
  */
 class OpenTransBundle extends Bundle
