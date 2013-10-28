@@ -47,21 +47,21 @@ class SEOpenTransExtension extends Extension
             $nodeLoaderDefinition = new Definition(trim(get_class($nodeLoaderInstance), '\\'));
 
             foreach($documentConfig['loader'] as $nodeName => $class) {
-                $nodeLoaderDefinition->addMethodCall('set', [$nodeName, trim($class, '\\')]);
+                $nodeLoaderDefinition->addMethodCall('set', array($nodeName, trim($class, '\\')));
                 $nodeLoaderInstance->set($nodeName, trim($class, '\\'));
             }
 
             $factoryClass = DocumentFactoryResolver::resolveFactory($nodeLoaderInstance, $type);
-            $factory = new Definition(trim($factoryClass, '\\'), [$nodeLoaderDefinition]);
-            $builder = new Definition('SE\Component\OpenTrans\DocumentBuilder', [$factory]);
+            $factory = new Definition(trim($factoryClass, '\\'), array($nodeLoaderDefinition));
+            $builder = new Definition('SE\Component\OpenTrans\DocumentBuilder', array($factory));
 
             $builder->addMethodCall('build');
-            $builder->addMethodCall('load', [$documentConfig['document']]);
+            $builder->addMethodCall('load', array($documentConfig['document']));
 
             $container->setDefinition($name, $builder);
 
             $manager = $container->findDefinition('se.opentrans.document_builder_manager');
-            $manager->addMethodCall('addDocumentBuilder', [$id, new Reference($name)]);
+            $manager->addMethodCall('addDocumentBuilder', array($id, new Reference($name)));
 
             unset($nodeLoaderInstance);
         }
