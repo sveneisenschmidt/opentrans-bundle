@@ -2,7 +2,7 @@
     "name": "se/opentrans-bundle",
     "type": "bundle",
     "description": "This bundle integrates the opentrans library into Symfony2. Allows to create OpenTRANS compatible documents from PHP.",
-    "keywords": ["symfony2", "bundle", "opentrans", "document", "serialization", "xml"],
+    "keywords": ["symfony2", "opentrans", "serialization", "xml", "bundle"],
     "homepage": "https://github.com/sveneisenschmidt/opentrans-bundle",
     "license": "MIT",
     "authors": [
