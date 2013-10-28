@@ -20,8 +20,7 @@
     },
     "autoload": {
         "psr-0": {
-            "SE\\Component\\OpenTrans\\Tests": "tests/",
-            "SE\\Component\\OpenTrans": "src/"
+            "SE\\Bundle\\OpenTransBundle": "src/"
         }
     }
 }
