@@ -1,0 +1,27 @@
+{
+    "name": "se/opentrans-bundle",
+    "type": "bundle",
+    "description": "Allows to read, create and write OpenTRANS comptaible documents from thinin Symfony2",
+    "keywords": ["symfony2", "bundle", "opentrans", "document", "serialization", "xml"],
+    "homepage": "https://github.com/sveneisenschmidt/opentrans-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sven Eisenschmidt",
+            "email": "sven.eisenschmidt@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "se/opentrans": "0.1.*@beta"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "SE\\Component\\OpenTrans\\Tests": "tests/",
+            "SE\\Component\\OpenTrans": "src/"
+        }
+    }
+}
