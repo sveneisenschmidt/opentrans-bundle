@@ -23,7 +23,7 @@ class DocumentBuilderManager
      *
      * @var \SE\Component\OpenTrans\DocumentBuilder[]
      */
-    protected $builders = [];
+    protected $builders = array();
 
     /**
      * @param $name
