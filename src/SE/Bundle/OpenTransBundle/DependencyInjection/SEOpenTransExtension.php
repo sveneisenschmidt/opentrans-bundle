@@ -16,6 +16,9 @@ use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
 
+use \SE\Component\OpenTrans\DocumentFactory\DocumentFactoryResolver;
+use \SE\Component\OpenTrans\NodeLoader;
+
 /**
  *
  * @package SE\Bundle\OpenTransBundle
@@ -33,5 +36,34 @@ class SEOpenTransExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+        $documents = $config['documents'];
+        foreach($documents as $id => $documentConfig) {
+
+            $name = 'se.opentrans.document_builder'.$id;
+            $type = $documentConfig['type'];
+
+            $nodeLoaderInstance = new NodeLoader;
+            $nodeLoaderDefinition = new Definition(trim(get_class($nodeLoaderInstance), '\\'));
+
+            foreach($documentConfig['loader'] as $nodeName => $class) {
+                $nodeLoaderDefinition->addMethodCall('set', [$nodeName, trim($class, '\\')]);
+                $nodeLoaderInstance->set($nodeName, trim($class, '\\'));
+            }
+
+            $factoryClass = DocumentFactoryResolver::resolveFactory($nodeLoaderInstance, $type);
+            $factory = new Definition(trim($factoryClass, '\\'), [$nodeLoaderDefinition]);
+            $builder = new Definition('SE\Component\OpenTrans\DocumentBuilder', [$factory]);
+
+            $builder->addMethodCall('build');
+            $builder->addMethodCall('load', [$documentConfig['document']]);
+
+            $container->setDefinition($name, $builder);
+
+            $manager = $container->findDefinition('se.opentrans.document_builder_manager');
+            $manager->addMethodCall('addDocumentBuilder', [$id, new Reference($name)]);
+
+            unset($nodeLoaderInstance);
+        }
     }
 }

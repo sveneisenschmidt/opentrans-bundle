@@ -1,0 +1,7 @@
+parameters:
+  se.opentrans.document_builder_manager.class: 'SE\Bundle\OpenTransBundle\DocumentBuilderManager'
+
+services:
+
+  se.opentrans.document_builder_manager:
+    class: '%se.opentrans.document_builder_manager.class%'

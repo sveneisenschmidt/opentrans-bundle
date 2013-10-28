@@ -25,6 +25,26 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $builder = new TreeBuilder();
+        $builder->root('se_open_trans')
+            ->addDefaultsIfNotSet()
+            ->children()
+                ->arrayNode('documents')
+                    ->prototype('array')
+                        ->children()
+                            ->arrayNode('loader')
+                                ->prototype('scalar')->end()
+                            ->end()
+                            ->scalarNode('type')
+                                ->isRequired()
+                            ->end()
+                            ->variableNode('document')
+                                ->isRequired()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end()
+        ->end();
 
         return $builder;
     }

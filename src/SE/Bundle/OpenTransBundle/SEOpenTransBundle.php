@@ -16,7 +16,7 @@ use \Symfony\Component\HttpKernel\Bundle\Bundle;
  * @package SE\Bundle\OpenTransBundle\Tests
  * @author Sven Eisenschmidt <sven.eisenschmidt@gmail.com>
  */
-class OpenTransBundle extends Bundle
+class SEOpenTransBundle extends Bundle
 {
 
 }
