@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a1138c20d30866a3cedd8f206b9a012d",
+    "hash": "81929ef621f53e09b1d27b15ea2276ee",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -698,16 +698,16 @@
         },
         {
             "name": "se/opentrans",
-            "version": "v0.1-beta3",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sveneisenschmidt/opentrans.git",
-                "reference": "71d6d716402ed58855051594e6e058be5c0bc92c"
+                "reference": "046180318182dc0366c04cd39f8872f6616d641e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sveneisenschmidt/opentrans/zipball/71d6d716402ed58855051594e6e058be5c0bc92c",
-                "reference": "71d6d716402ed58855051594e6e058be5c0bc92c",
+                "url": "https://api.github.com/repos/sveneisenschmidt/opentrans/zipball/046180318182dc0366c04cd39f8872f6616d641e",
+                "reference": "046180318182dc0366c04cd39f8872f6616d641e",
                 "shasum": ""
             },
             "require": {
@@ -745,7 +745,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-10-28 14:38:06"
+            "time": "2013-10-29 10:41:41"
         },
         {
             "name": "symfony/icu",
@@ -1326,9 +1326,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "se/opentrans": 10
-    },
+    "stability-flags": [
+
+    ],
     "platform": {
         "php": ">=5.3.3"
     },
