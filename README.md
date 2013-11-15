@@ -3,6 +3,7 @@ OpenTransBundle
 
 
 [![Latest Stable Version](https://poser.pugx.org/se/opentrans-bundle/v/stable.png)](https://packagist.org/packages/se/opentrans-bundle)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/4161a631-d706-458d-b94e-d54bb545f0f8/mini.png)](https://insight.sensiolabs.com/projects/4161a631-d706-458d-b94e-d54bb545f0f8)
 
 This bundle integrates the [opentrans] (https://github.com/sveneisenschmidt/opentrans) library into Symfony2.
 
