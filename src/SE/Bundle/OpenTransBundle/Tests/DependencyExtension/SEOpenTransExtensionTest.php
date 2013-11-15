@@ -55,6 +55,31 @@ class SEBmecatBundleExtensionTest extends \PHPUnit_Framework_TestCase
     /**
      *
      * @test
+     */
+    public function LoadNodeLoaderMapping()
+    {
+        $name = sha1(uniqid(microtime(), true));
+        $node = $this->getMock('SE\Component\OpenTrans\Node\Order\DocumentNode', array(), array(), 'Fixture_Order_Document_Node'.$name);
+
+        $config = array(
+            array(
+                'documents' => array($name => array('type' => 'order', 'document' => array(), 'loader' => array(
+                    'node.order.document' => get_class($node)
+                )) )
+            )
+        );
+
+        $container = $this->getContainerForConfig($config);
+        $service   = $container->get('se.opentrans.document_builder_manager');
+        $builder   = $service->getDocumentBuilder($name);
+        $document  = $builder->getDocument();
+
+        $this->assertInstanceOf(get_class($node), $document);
+    }
+
+    /**
+     *
+     * @test
      * @expectedException \SE\Bundle\OpenTransBundle\Exception\UnknownDocumentBuilderException
      */
     public function LoadsUnknownBuilderFromConfig()
