@@ -698,16 +698,16 @@
         },
         {
             "name": "se/opentrans",
-            "version": "v0.1.0",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sveneisenschmidt/opentrans.git",
-                "reference": "046180318182dc0366c04cd39f8872f6616d641e"
+                "reference": "01f925c36fb7406efd7fbfc5c75cc5b48362b8f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sveneisenschmidt/opentrans/zipball/046180318182dc0366c04cd39f8872f6616d641e",
-                "reference": "046180318182dc0366c04cd39f8872f6616d641e",
+                "url": "https://api.github.com/repos/sveneisenschmidt/opentrans/zipball/01f925c36fb7406efd7fbfc5c75cc5b48362b8f3",
+                "reference": "01f925c36fb7406efd7fbfc5c75cc5b48362b8f3",
                 "shasum": ""
             },
             "require": {
@@ -717,6 +717,7 @@
                 "symfony/serializer": "2.3.*"
             },
             "require-dev": {
+                "phploc/phploc": "*",
                 "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
@@ -745,7 +746,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-10-29 10:41:41"
+            "time": "2013-11-15 08:47:29"
         },
         {
             "name": "symfony/icu",
