@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "se/opentrans": "~0.1@beta"
+        "se/opentrans": "~0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
