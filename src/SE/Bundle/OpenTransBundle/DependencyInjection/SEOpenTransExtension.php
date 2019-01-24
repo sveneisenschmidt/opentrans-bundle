@@ -16,8 +16,8 @@ use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
 
-use \SE\Component\OpenTrans\DocumentFactory\DocumentFactoryResolver;
-use \SE\Component\OpenTrans\NodeLoader;
+use SE\Component\OpenTrans\DocumentFactory\DocumentFactoryResolver;
+use SE\Component\OpenTrans\NodeLoader;
 
 /**
  *

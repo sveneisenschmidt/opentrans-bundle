@@ -9,11 +9,11 @@
  */
 namespace SE\Bundle\OpenTransBundle\Tests\DependencyInjection;
 
-use \SE\Bundle\OpenTransBundle\SEOpenTransBundle;
+use SE\Bundle\OpenTransBundle\SEOpenTransBundle;
 
-use \Symfony\Component\DependencyInjection\Compiler\ResolveParameterPlaceHoldersPass;
-use \Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass;
-use \Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Compiler\ResolveParameterPlaceHoldersPass;
+use Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  *
