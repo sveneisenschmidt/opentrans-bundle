@@ -9,8 +9,8 @@
  */
 namespace SE\Bundle\OpenTransBundle;
 
-use \SE\Bundle\OpenTransBundle\Exception\UnknownDocumentBuilderException;
-use \SE\Component\OpenTrans\DocumentBuilder;
+use SE\Bundle\OpenTransBundle\Exception\UnknownDocumentBuilderException;
+use SE\Component\OpenTrans\DocumentBuilder;
 
 /**
  *

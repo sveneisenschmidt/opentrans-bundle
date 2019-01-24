@@ -9,7 +9,7 @@
  */
 namespace SE\Bundle\OpenTransBundle;
 
-use \Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  *
